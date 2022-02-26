@@ -2,15 +2,20 @@
 var mtlLoader = new THREE.MTLLoader();
 mtlLoader.setTexturePath('/assets/');
 mtlLoader.setPath('/assets/');
-mtlLoader.load("/cube/cube.mtl", function(materials) {
+mtlLoader.load("/trash/trash.mtl", function(materials) {
   materials.preload();
   
+
+  
+
+
+
   var objLoader = new THREE.OBJLoader();
   objLoader.setMaterials(materials);
   objLoader.setPath('/assets/');
-  objLoader.load("/cube/cube.obj", function(object) {
+  objLoader.load("/trash/trash.obj", function(object) {
     myObj = object;
-    object.scale.set(0.5, 0.5, 0.5);
+    object.scale.set(0.05, 0.05,0.05);
     scene.add(object);
   })
   
@@ -24,9 +29,10 @@ var scene = new THREE.Scene();
 
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
 camera.position.z = 5;
+camera.position.y = 2;
 
 var renderer = new THREE.WebGLRenderer({antialias:true});
-renderer.setClearColor("#e5e5e5");
+renderer.setClearColor("#FFFFFF");
 renderer.setSize(window.innerWidth, window.innerHeight);
 
 document.body.appendChild(renderer.domElement);
@@ -62,3 +68,9 @@ var render = function() {
 }
 
 render();
+
+
+//bike
+//reusable water bottle
+//recycling
+//lightbulb
