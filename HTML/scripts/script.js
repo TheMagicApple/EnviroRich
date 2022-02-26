@@ -14,28 +14,11 @@ mtlLoader.load("/cube/cube.mtl", function(materials) {
     scene.add(object);
   })
   
-
 })
 
 
 
-
-//Functions
-let fps = 60;
-let tau = 2;            // 
-const step = 1 / (tau * fps);
-let t = 0;
-
-function rotate(t, direction){
-
-  if (t >= 1) return; // Motion ended
-  t += step;  // Increment time
-  myObj.rotation.y += direction/10; // Increment rotation
-}
-
-
-
-//Three.js
+//Three.js setup
 
 var scene = new THREE.Scene();
 
@@ -49,7 +32,6 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
 //Resizing window
-
 window.addEventListener('resize', () => {
   renderer.setSize(window.innerWidth,window.innerHeight);
   camera.aspect = window.innerWidth / window.innerHeight;
@@ -59,8 +41,7 @@ window.addEventListener('resize', () => {
 })
 
 
-//Light
-
+//Lights
 var light = new THREE.PointLight(0xFFFFFF, 0.5, 500);
 light.position.set(10, 0, 25);
 scene.add(light);
@@ -74,7 +55,6 @@ scene.add(light2);
 //Render
 var render = function() {
   requestAnimationFrame(render);
-
 
   renderer.render(scene, camera);
   myObj.rotation.y += 0.01;
