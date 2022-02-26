@@ -1,25 +1,44 @@
+//Model class
+class Model{
+  constructor(objPath, mtlPath) {
+    this.objPath = objPath;
+    this.mtlPath = mtlPath;
+  }
+}
+
+
+var scene_objects = [];
+
+water_bottle = new Model('/bottle/bottle.obj', '/bottle/bottle.mtl');
+bike = new Model('/bike/bike.obj', '/bike/bike.mtl');
+trash = new Model('/trash/trash.obj', '/trash/trash.mtl');
+
+
 //Set up model loader
-var mtlLoader = new THREE.MTLLoader();
-mtlLoader.setTexturePath('/assets/');
-mtlLoader.setPath('/assets/');
-mtlLoader.load("/trash/trash.mtl", function(materials) {
-  materials.preload();
+function load(toLoad, pos) {
+  var mtlLoader = new THREE.MTLLoader();
+  mtlLoader.setTexturePath('/assets/');
+  mtlLoader.setPath('/assets/');
+  mtlLoader.load(toLoad.mtlPath, function(materials) {
+    materials.preload();
   
 
-  
-
-
-
-  var objLoader = new THREE.OBJLoader();
-  objLoader.setMaterials(materials);
-  objLoader.setPath('/assets/');
-  objLoader.load("/trash/trash.obj", function(object) {
-    myObj = object;
-    object.scale.set(0.05, 0.05,0.05);
-    scene.add(object);
+    var objLoader = new THREE.OBJLoader();
+    objLoader.setMaterials(materials);
+    objLoader.setPath('/assets/');
+    objLoader.load(toLoad.objPath, function(object) {
+      myObj = object;
+      object.scale.set(0.05, 0.05,0.05);
+      object.position.set(pos[0], pos[1], pos[2]);
+      scene.add(object);
+      scene_objects.push(object);
+    })
+    
   })
-  
-})
+}
+load(water_bottle, [0, 0, 0]);
+load(bike, [5, 0, 0]);
+load(trash, [-5, 0, 0])
 
 
 
@@ -63,7 +82,11 @@ var render = function() {
   requestAnimationFrame(render);
 
   renderer.render(scene, camera);
-  myObj.rotation.y += 0.01;
+
+  for (var i=0; i<scene_objects.length; i++) {
+    scene_objects[i].rotation.y += 0.01;
+  }
+  
 
 }
 
