@@ -2,13 +2,13 @@
 var mtlLoader = new THREE.MTLLoader();
 mtlLoader.setTexturePath('/assets/');
 mtlLoader.setPath('/assets/');
-mtlLoader.load("/shrek/cube.mtl", function(materials) {
+mtlLoader.load("/cube/cube.mtl", function(materials) {
   materials.preload();
   
   var objLoader = new THREE.OBJLoader();
   objLoader.setMaterials(materials);
   objLoader.setPath('/assets/');
-  objLoader.load("/shrek/cube.obj", function(object) {
+  objLoader.load("/cube/cube.obj", function(object) {
     myObj = object;
     object.scale.set(0.5, 0.5, 0.5);
     scene.add(object);
