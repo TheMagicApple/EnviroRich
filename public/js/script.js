@@ -13,6 +13,8 @@ water_bottle = new Model('/bottle/bottle.obj', '/bottle/bottle.mtl');
 bike = new Model('/bike/bike.obj', '/bike/bike.mtl');
 trash = new Model('/trash/trash.obj', '/trash/trash.mtl');
 bag = new Model('/bag/bag.obj', '/bag/bag.mtl');
+tree = new Model('/tree/tree.obj', '/tree/tree.mtl');
+
 
 
 //Set up model loader
@@ -41,7 +43,7 @@ load(water_bottle, [0, 0, 0]);
 load(bike, [5, 0, 0]);
 load(trash, [-5, 0, 0]);
 load(bag, [0, 2, 0]);
-
+load(tree, [5, 2, 0]);
 
 
 //Three.js setup
