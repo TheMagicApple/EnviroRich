@@ -1,3 +1,4 @@
+
 #Pitch{
   position:absolute;
   left:0%;
@@ -15,7 +16,7 @@
   left:25%;
   top:24%;
   width:50%;
-  height:20%;
+  height:20%:
   display:flex;
   justify-content:center;
   align-items:center;
@@ -28,7 +29,7 @@
   top:0%;
   height:7%;
   width:100%;
-  border-bottom:2px solid black;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   
 }
 #Name{
@@ -63,6 +64,9 @@
   transform:scale(1.1);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
+
+
+
 body{
   font-family: 'Raleway', sans-serif;
 }
@@ -131,3 +135,462 @@ body{
   transform:scale(1.1);
 }
 
+#Results{
+  position:absolute;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  top:50%;
+  font-size:50px;
+}
+
+
+main {
+    position: absolute;
+    top: 35.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+main2 {
+    position: absolute;
+    top: 45.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group #username {
+    outline: none;
+    border: 2px solid #dadce0;
+    padding: 16px 13px;
+    font-size: 18px;
+    border-radius: 5px;
+    width:350px;
+    transition: 0.2s all;
+}
+
+.input-group #username:valid + .label {
+    top: -8px;
+    padding: 0 3px;
+    font-size: 14px;
+    color: #8d8d8d;
+}
+
+.input-group #username:focus {
+    border: 2px solid royalblue;
+}
+
+.input-group #password {
+    outline: none;
+    border: 2px solid #dadce0;
+    padding: 16px 13px;
+    font-size: 18px;
+    border-radius: 5px;
+    width:350px;
+    transition: 0.2s all;
+}
+
+.input-group #password:valid + .label {
+    top: -8px;
+    padding: 0 3px;
+    font-size: 14px;
+    color: #8d8d8d;
+}
+
+.input-group #password:focus {
+    border: 2px solid royalblue;
+}
+
+.input-group .label {
+    color: #8d8d8d;
+    position: absolute;
+    top: 20px;
+    left: 13px;
+    background: #ffffff;
+    transition: 0.2s all;
+}
+
+.input-group #username:focus + .label {
+    top: -8px;
+    padding: 0 3px;
+    font-size: 14px;
+    color: royalblue;
+}
+
+.input-group #password:focus + .label {
+    top: -8px;
+    padding: 0 3px;
+    font-size: 14px;
+    color: royalblue;
+}
+
+#Login{
+  border:2px solid rgb(59, 153, 255);
+  width:7%;
+  height:70%;
+  position:absolute;
+  left:84%;
+  font-size:30px;
+  top:15%;
+  padding-bottom:-20px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  text-decoration:none;
+  transition:0.3s all;
+  overflow:hidden;
+  background-color:rgb(
+59, 153, 255
+);
+}
+
+#Login:hover{
+  filter:brightness(70%);
+}
+
+#Signup{
+  border:2px solid lightgray;
+  width:7%;
+  height:70%;
+  position:absolute;
+  left:92%;
+  font-size:30px;
+  top:15%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:black;
+  text-decoration:none;
+  transition:0.3s all;
+  background-color:lightgray;
+}
+
+#Signup:hover{
+  filter:brightness(70%);
+}
+#MoneyContainer{
+  position:absolute;
+  width:50%;
+  left:25%;
+  height:10%;
+  top:20%;
+  border:2px solid rgb(3, 252, 23);
+}
+#MoneyBar{
+  background-color:rgb(3, 252, 23);
+  width:0%;
+  position:absolute;
+  left:0%;
+  top:0%;
+  height:100%;
+  animation-name:barAnimation;
+  animation-duration:2s;
+  animation-fill-mode:forwards;
+  animation-delay:1s;
+  animation-timing-function:ease-out;
+}
+@keyframes barAnimation{
+  0%{width:0%;}
+  100%{width:100%;}
+}
+#MoneyValue{
+  font-size:40px;
+  width:20%;
+  position:absolute;
+  left:90%;
+  top:120%;
+  height:20%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:black;
+}
+#MoneyTitle{
+  font-size:60px;
+  position:absolute;
+  left:25%;
+  width:50%;
+  top:-70%;
+  height:20%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+#EnvironmentValue{
+  font-size:40px;
+  width:20%;
+  position:absolute;
+  left:90%;
+  top:120%;
+  height:20%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:black;
+}
+#EnvironmentContainer{
+  position:absolute;
+  width:50%;
+  left:25%;
+  height:10%;
+  top:50%;
+  border:2px solid rgb(3, 161, 252);
+}
+#EnvironmentTitle{
+  font-size:60px;
+  position:absolute;
+  left:25%;
+  width:50%;
+  top:-70%;
+  height:20%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+#EnvironmentBar{
+  background-color:rgb(3, 161, 252);
+  width:0%;
+  position:absolute;
+  left:0%;
+  top:0%;
+  height:100%;
+  animation-name:barAnimation;
+  animation-duration:2s;
+  animation-fill-mode:forwards;
+  animation-delay:1s;
+  animation-timing-function:ease-out;
+}
+
+#Next{
+  border:2px solid black;
+  width:20%;
+  height:10%;
+  position:absolute;
+  font-size:40px;
+  left:40%;
+  top:70%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:black;
+  text-decoration:none;
+  transition:0.3s all;
+}
+
+#Next:hover{
+  transform:scale(1.1);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#TodayStats{
+  width:40%;
+  height:15%;
+  position:absolute;
+  left:5%;
+  top:20%;
+  border:2px solid black;
+  border-radius:100px;
+}
+#TodayCO2{
+  position:absolute;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  top:0%;
+  height:100%;
+  font-size:40px;
+}
+#Stats{
+  width:40%;
+  height:50%;
+  position:absolute;
+  left:5%;
+  top:40%;
+  border:2px solid black;
+  border-radius:100px;
+}
+#Claim{
+  width:40%;
+  height:30%;
+  position:absolute;
+  left:55%;
+  top:20%;
+  border:2px solid black;
+  border-radius:100px;
+}
+#More{
+  width:40%;
+  height:30%;
+  position:absolute;
+  left:55%;
+  top:60%;
+  border:2px solid black;
+  border-radius:100px;
+}
+
+#LoginText{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:absolute;
+  width:100%;
+  top:25%;
+  font-size:30px;
+}
+#TotalMoney{
+  position:absolute;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  top:50%;
+  height:50%;
+  font-size:50px;
+}
+#TotalCO2{
+  position:absolute;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  top:0%;
+  height:50%;
+  font-size:50px;
+}
+#ClaimButton{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:35px;
+  border:2px solid black;
+  width:50%;
+  height:50%;
+  position:absolute;
+  left:25%;
+  top:25%;
+  color:black;
+  text-decoration:none;
+  transition:0.3s all;
+}
+#ClaimButton:hover{
+  transform:scale(1.2);
+}
+#MoreDesc{
+  font-size:25px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:80%;
+  position:absolute;
+  left:10%;
+  height:20%;
+  top:10%;
+  text-align:center;
+}
+#MoreLink1{
+  font-size:30px;
+  position:absolute;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  height:10%;
+  left:0%;
+  top:40%;
+  color:blue;
+  text-decoration:none;
+}
+#MoreLink2{
+  font-size:30px;
+  position:absolute;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  height:10%;
+  left:0%;
+  top:60%;
+  color:blue;
+  text-decoration:none;
+}
+#MoreLink3{
+  font-size:30px;
+  position:absolute;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  height:10%;
+  left:0%;
+  top:80%;
+  color:blue;
+  text-decoration:none;
+}
+#SignUp2{
+  justify-content:center;
+  align-items:center;
+  display:flex;
+  position:absolute;
+  width:100%;
+  top:70%;
+  font-size:30px;
+}
+
+#LoginButton{
+  border:2px solid black;
+  width:10%;
+  height:5%;
+  position:absolute;
+  left:45.3%;
+  font-size:30px;
+  top:55%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:black;
+  text-decoration:none;
+  transition:0.3s all;
+}
+
+#LoginButton:hover{
+  transform:scale(1.1);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+#Error{
+  width:100%;
+  height:90%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:absolute;
+  left:0%;
+  top:10%;
+  font-size:50px;
+}
+
+#SignUpButton{
+  border:2px solid black;
+  width:10%;
+  height:5%;
+  position:absolute;
+  left:45.3%;
+  font-size:30px;
+  top:55%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:black;
+  text-decoration:none;
+  transition:0.3s all;
+}
+
+#SignUpButton:hover{
+  transform:scale(1.1);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}

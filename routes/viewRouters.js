@@ -17,4 +17,23 @@ router.get("/selectThings", (req, res) => {
   res.sendFile(path.join(viewsPath, "/selectThings.html"));
 });
 
+router.get("/dashboard", (req, res) => {
+  res.sendFile(path.join(viewsPath, "/dashboard.html"));
+});
+
+router.get("/loggedin", (req, res) => {
+  res.sendFile(path.join(viewsPath, "/loggedin.html"));
+});
+
+router.get("/login", (req, res) => {
+  res.sendFile(path.join(viewsPath, "/login.html"));
+});
+
+router.get("/signup", (req, res) => {
+  res.sendFile(path.join(viewsPath, "/signup.html"));
+});
+router.get("/claim", (req, res) => {
+  res.sendFile(path.join(viewsPath, "/claim.html"));
+});
+
 module.exports = router;
