@@ -752,7 +752,6 @@ main2 {
   top:35%;
 }
 
-.subtitle{
-  position:abosolute;
-  left:50%;
+.subtitle {
+    font-size: 30px;
 }
