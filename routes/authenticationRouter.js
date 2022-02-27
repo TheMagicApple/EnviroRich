@@ -6,8 +6,8 @@ const router = express.Router();
 const authenticate = require("../controllers/authenticate.js");
 
 router.use(express.json());
-router.use(passport.initialize());
-router.use(passport.session());
+// router.use(passport.initialize());
+// router.use(passport.session());
 
 passport.use(authenticate.createStrategy());
 passport.serializeUser(authenticate.serializeUser);

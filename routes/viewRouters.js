@@ -5,8 +5,9 @@ const router = express.Router();
 const viewsPath = path.join(__dirname, "../views");
 
 router.use(express.static(path.join(__dirname, "../public")));
-
 router.get("/", (req, res) => {
+  // console.log(req);
+  // console.log(req.user);
   res.sendFile(path.join(viewsPath, "/index.html"));
 });
 
@@ -22,7 +23,7 @@ router.get("/dashboard", (req, res) => {
   res.sendFile(path.join(viewsPath, "/dashboard.html"));
 });
 
-router.get("/loggedin", (req, res) => {
+router.get("/loggedin", ensureLoggedIn("/"), (req, res) => {
   res.sendFile(path.join(viewsPath, "/loggedin.html"));
 });
 

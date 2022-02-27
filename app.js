@@ -1,5 +1,6 @@
 const express = require("express");
 const session = require("express-session");
+const passport = require("passport");
 const app = express();
 
 app.set("json spaces", 4);
@@ -13,6 +14,9 @@ app.use(
     cookie: { maxAge: 60 * 60 * 1000 },
   })
 );
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 const routers = require("./routes/routers.js");
 app.use("/", routers);
