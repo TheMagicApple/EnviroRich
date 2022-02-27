@@ -17,7 +17,7 @@ app.use(
 const routers = require("./routes/routers.js");
 app.use("/", routers);
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Server started on port ${port}`);
 });
