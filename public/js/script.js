@@ -39,11 +39,11 @@ function load(toLoad, pos) {
     
   })
 }
-load(water_bottle, [0, 0, 0]);
-load(bike, [5, 0, 0]);
-load(trash, [-5, 0, 0]);
-load(bag, [0, 2, 0]);
-load(tree, [5, 2, 0]);
+load(water_bottle, [0, 0.5, 0]);
+load(bike, [5, 0.5, 0]);
+load(trash, [-5, 0.5, 0]);
+load(bag, [0, 2.5, 0]);
+load(tree, [5, 2.5, 0]);
 
 
 //Three.js setup
