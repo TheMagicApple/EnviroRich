@@ -14,7 +14,7 @@ bike = new Model('/bike/bike.obj', '/bike/bike.mtl');
 trash = new Model('/trash/trash.obj', '/trash/trash.mtl');
 bag = new Model('/bag/bag.obj', '/bag/bag.mtl');
 tree = new Model('/tree/tree.obj', '/tree/tree.mtl');
-
+apple = new Model('./apple/apple.obj', '/apple/apple.mtl');
 
 
 //Set up model loader
@@ -44,7 +44,7 @@ load(bike, [5, 0.5, 0]);
 load(trash, [-5, 0.5, 0]);
 load(bag, [0, 2.5, 0]);
 load(tree, [5, 2.5, 0]);
-
+load(apple, [-5, 2.5, 0]);
 
 //Three.js setup
 
