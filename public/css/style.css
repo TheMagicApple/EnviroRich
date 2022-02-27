@@ -752,6 +752,42 @@ main2 {
   top:35%;
 }
 
-.subtitle {
-    font-size: 30px;
+
+.subtitle1 {
+  position:absolute;
+  left:23%;
+  fony-size:10px;
+  top:45%;
+}
+
+.subtitle2 {
+  position:absolute;
+  left:50%;
+  fony-size:10px;
+  top:45%;
+}
+
+.subtitle3 {
+  position:absolute;
+  left:74%;
+  fony-size:10px;
+  top:45%;
+}
+.subtitle4 {
+  position:absolute;
+  left:23%;
+  fony-size:10px;
+  top:78%;
+}
+.subtitle5 {
+  position:absolute;
+  left:50%;
+  fony-size:10px;
+  top:78%;
+}
+.subtitle6 {
+  position:absolute;
+  left:74%;
+  fony-size:10px;
+  top:78%;
 }
