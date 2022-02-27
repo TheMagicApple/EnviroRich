@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const router = express.Router();
 const viewsPath = path.join(__dirname, "../views");
+const { ensureLoggedIn } = require("connect-ensure-login");
 
 router.use(express.static(path.join(__dirname, "../public")));
 router.get("/", (req, res) => {
