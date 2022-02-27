@@ -14,7 +14,7 @@
   </head>
   <body>
     <div id="Header">
-      <a href="/" id="Name"><b>EnviroRich</b></a>
+       <button onclick="headerButton()" id="Name"><b>EnviroRich</b></button>
       <img id="image" src="assets/moneyplant.png" />
     </div>
     <div id="TodayStats">
@@ -44,9 +44,24 @@
         id="MoreLink3"
         >treehugger.com</a
       >
-      <a id="leaderboardbutton" href="/leaderboard">View the leaderboard</a>
+      <!--<a id="leaderboardbutton" href="/leaderboard">View the leaderboard</a>-->
 
 
     </div>
+
+    <script src="js/script.js"></script>
+    <script>
+      document.getElementById("TodayCO2").innerHTML="Today you saved "+localStorage.getItem("TodayCO2")+" KG of CO2!";
+      document.getElementById("TotalCO2").innerHTML="<b>Total CO2 saved: "+localStorage.getItem("TotalCO2")+" KG</b>";
+      document.getElementById("TotalMoney").innerHTML="<b>Total money made: $"+localStorage.getItem("TotalCO2")+"</b>";
+      function headerButton(){
+        var loggedIn=localStorage.getItem("LoggedIn");
+        if(loggedIn=="true"){
+          window.location.href="/dashboard";
+        }else{
+          window.location.href="/";
+        }
+      }
+    </script>
   </body>
 </html>

@@ -14,9 +14,21 @@
   </head>
   <body>
     <div id="Header">
-      <a href="/" id="Name"><b>EnviroRich</b></a>
+       <button onclick="headerButton()" id="Name"><b>EnviroRich</b></button>
       <img id="image" src="assets/moneyplant.png" />
     </div>
     <div id="Error">404 Error: Money not found :(</div>
+
+    <script src="js/script.js"></script>
+    <script>
+      function headerButton(){
+        var loggedIn=localStorage.getItem("LoggedIn");
+        if(loggedIn=="true"){
+          window.location.href="/dashboard";
+        }else{
+          window.location.href="/";
+        }
+      }
+    </script>
   </body>
 </html>
