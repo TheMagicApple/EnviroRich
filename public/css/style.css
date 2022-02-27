@@ -44,6 +44,8 @@
   font-size:30px;
   color:rgb(3, 252, 23);
   text-decoration:none;
+  background-color:white;
+  border:none;
 }
 #selectThingsButton{
   border:5px solid rgb(3, 252, 23);
@@ -59,6 +61,7 @@
   justify-content:center;
   align-items:center;
   transition:0.3s all;
+  background-color:white;
 }
 #selectThingsButton:hover{
   transform:scale(1.1);
@@ -104,10 +107,10 @@ body{
   text-align:center;
 }
 #SelectTitle{
-  font-size:50px;
+  font-size:40px;
   width:70%;
   left:15%;
-  height:10%;
+  height:5%;
   position:absolute;
   top:10%;
   display:flex;
@@ -125,10 +128,11 @@ body{
   height:10%;
   left:40%;
   text-decoration:none;
-  top:80%;
+  top:85%;
   font-size:40px;
   color:black;
   transition:0.3s all;
+  background-color:white;
 }
 
 #Done:hover{
@@ -556,6 +560,7 @@ main2 {
   color:black;
   text-decoration:none;
   transition:0.3s all;
+  background-color:white;
 }
 
 #LoginButton:hover{
@@ -593,4 +598,161 @@ main2 {
 #SignUpButton:hover{
   transform:scale(1.1);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#Select1{
+  width:300px;
+  height:300px;
+  background:transparent;
+  border:none;
+  position:absolute;
+  left:16%;
+  top:48%;
+}
+#Select2{
+  width:300px;
+  height:300px;
+  background:transparent;
+  border:none;
+  position:absolute;
+  left:43%;
+  top:48%;
+}
+#Select3{
+  width:500px;
+  height:300px;
+  background:transparent;
+  border:none;
+  position:absolute;
+  left:65%;
+  top:48%;
+}
+#Select4{
+  width:300px;
+  height:300px;
+  background:transparent;
+  border:none;
+  position:absolute;
+  left:16%;
+  top:20%;
+}
+#Select5{
+  width:300px;
+  height:250px;
+  background:transparent;
+  border:none;
+  position:absolute;
+  left:43%;
+  top:20%;
+}
+#Select6{
+  width:300px;
+  height:270px;
+  background:transparent;
+  border:none;
+  position:absolute;
+  left:69%;
+  top:17%;
+}
+
+#Welcome{
+  width:50%;
+  font-size:70px;
+  position:absolute;
+  height:10%;
+  border-bottom:2px solid black;
+  left:25%;
+  top:10%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+#selectButton{
+  border:2px solid black;
+  width:20%;
+  height:10%;
+  position:absolute;
+  left:40%;
+  font-size:30px;
+  top:35%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:black;
+  text-decoration:none;
+  transition:0.3s all;
+  font-family: 'Raleway', sans-serif;
+  background-color:white;
+}
+#selectButton:hover{
+  transform:scale(1.1);
+}
+#Or{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:absolute;
+  height:10%;
+  left:0%;
+  top:50%;
+  font-size:70px;
+}
+#dashboardButton{
+  border:2px solid black;
+  width:20%;
+  height:10%;
+  position:absolute;
+  left:40%;
+  font-size:30px;
+  top:65%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:black;
+  text-decoration:none;
+  transition:0.3s all;
+  font-family: 'Raleway', sans-serif;
+  background-color:white;
+}
+#dashboardButton:hover{
+  transform:scale(1.1);
+}
+.invis{
+  display:none;
+}
+#Check1{
+  position:absolute;
+  left:11%;
+  top:60%;
+}
+#Check2{
+  position:absolute;
+  left:40%;
+  top:62%;
+}
+#Check3{
+  position:absolute;
+  left:60%;
+  top:60%;
+}
+#Check4{
+  position:absolute;
+  left:12%;
+  top:35%;
+}
+#Check5{
+  position:absolute;
+  left:40%;
+  top:35%;
+}
+#Check6{
+  position:absolute;
+  left:67%;
+  top:35%;
+}
+
+.subtitle{
+  position:abosolute;
+  left:50%;
 }
