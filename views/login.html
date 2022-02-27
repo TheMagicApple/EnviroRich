@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <script src="js/script-login.js"></script>
   </head>
   <body>
     <div id="Header">
@@ -17,22 +18,32 @@
     </div>
     <div id="LoginText"><span title="Login">Login</span></div>
     <main>
-        <div class="input-group">
-            <input type="text" id="username" required id="userField"/>
-            <label for="username" class="label">Username</label>
-        </div>
+      <div class="input-group">
+        <input
+          type="text"
+          id="username"
+          name="username"
+          required
+          id="userField"
+          class="js-username"
+        />
+        <label for="username" class="label">Username</label>
+      </div>
     </main>
     <main2>
       <div class="input-group">
-            <input type="password" id="password" required id="passField"/>
-            <label for="password" class="label">Password</label>
-        </div>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          required
+          id="passField"
+          class="js-password"
+        />
+        <label for="password" class="label">Password</label>
+      </div>
     </main2>
+    <button onclick="sendLoginData()" id="SignUpButton">Login</button>
     <a href="/signup" id="SignUp2">Don't have an account? Sign up here</div>
-    <a href="/loggedin" id="LoginButton">Log In</a>
-    
-   
-    
-    <script src="js/script.js"></script>
   </body>
 </html> 

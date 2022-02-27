@@ -11,29 +11,42 @@
       href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
       rel="stylesheet"
     />
+    <script src="js/script-signup.js"></script>
   </head>
   <body>
     <div id="Header">
       <a href="/" id="Name"><b>EnviroRich</b></a>
       <img id="image" src="assets/moneyplant.png" />
       <a href="/login" id="Login">Login</a>
-      <a href="/singup" id="Signup">Sign up</a>
+      <a href="/signup" id="Signup">Sign up</a>
     </div>
     <div id="LoginText">Sign Up</div>
     <main>
       <div class="input-group">
-        <input type="text" id="username" required id="userField" />
+        <input
+          type="text"
+          id="username"
+          name="username"
+          required
+          id="userField"
+          class="js-username"
+        />
         <label for="username" class="label">Username</label>
       </div>
     </main>
     <main2>
       <div class="input-group">
-        <input type="password" id="password" required id="passField" />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          required
+          id="passField"
+          class="js-password"
+        />
         <label for="password" class="label">Password</label>
       </div>
     </main2>
-    <a href="/login" id="SignUpButton">Sign Up</a>
-
-    <script src="js/script.js"></script>
+    <button onclick="sendSignupData()" id="SignUpButton">Sign Up</button>
   </body>
 </html>

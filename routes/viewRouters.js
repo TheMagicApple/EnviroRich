@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+const { ensureLoggedIn } = require("connect-ensure-login");
 const router = express.Router();
 const viewsPath = path.join(__dirname, "../views");
 
@@ -21,7 +22,7 @@ router.get("/dashboard", (req, res) => {
   res.sendFile(path.join(viewsPath, "/dashboard.html"));
 });
 
-router.get("/loggedin", (req, res) => {
+router.get("/loggedin", ensureLoggedIn("/login"), (req, res) => {
   res.sendFile(path.join(viewsPath, "/loggedin.html"));
 });
 

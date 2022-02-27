@@ -23,7 +23,7 @@ connection.connect(function (err) {
     console.log("error connecting: " + err.stack);
     return;
   }
-  console.log(`Connected to MySQL database on thread ${connection.threadId}`);
+  console.log(`connected to mysql database on thread ${connection.threadid}`);
 });
 
 module.exports = connection;
