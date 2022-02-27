@@ -22,7 +22,7 @@ router.get("/dashboard", (req, res) => {
   res.sendFile(path.join(viewsPath, "/dashboard.html"));
 });
 
-router.get("/loggedin", ensureLoggedIn("/login"), (req, res) => {
+router.get("/loggedin", (req, res) => {
   res.sendFile(path.join(viewsPath, "/loggedin.html"));
 });
 
