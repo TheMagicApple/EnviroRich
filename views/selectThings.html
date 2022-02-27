@@ -21,31 +21,66 @@
       Select all of the things you did today to help the environment.
     </div>
     <button onclick="select(1)" class="invis" id="Select1"></button>
-      
-    <img src="assets/checkmark.png" width="100px" height="100px" id="Check1" class="invis">
-    <img src="assets/checkmark.png" width="100px" height="100px" id="Check2" class="invis">
-    <img src="assets/checkmark.png" width="100px" height="100px" id="Check3" class="invis">
-    <img src="assets/checkmark.png" width="100px" height="100px" id="Check4" class="invis">
-    <img src="assets/checkmark.png" width="100px" height="100px" id="Check5" class="invis">
-    <img src="assets/checkmark.png" width="100px" height="100px" id="Check6" class="invis">
+
+    <img
+      src="assets/checkmark.png"
+      width="100px"
+      height="100px"
+      id="Check1"
+      class="invis"
+    />
+    <img
+      src="assets/checkmark.png"
+      width="100px"
+      height="100px"
+      id="Check2"
+      class="invis"
+    />
+    <img
+      src="assets/checkmark.png"
+      width="100px"
+      height="100px"
+      id="Check3"
+      class="invis"
+    />
+    <img
+      src="assets/checkmark.png"
+      width="100px"
+      height="100px"
+      id="Check4"
+      class="invis"
+    />
+    <img
+      src="assets/checkmark.png"
+      width="100px"
+      height="100px"
+      id="Check5"
+      class="invis"
+    />
+    <img
+      src="assets/checkmark.png"
+      width="100px"
+      height="100px"
+      id="Check6"
+      class="invis"
+    />
     <button onclick="select(1)" id="Select1"></button>
-    
-      
+
     <button onclick="select(2)" id="Select2"></button>
-    
-     <div id="subtitle" >Apple</div>
+
+    <div id="subtitle">Apple</div>
     <button onclick="select(3)" id="Select3"></button>
-      
-      <!--<div id="subtitle" >Apple</div>-->
-    <button onclick="select(4)"id="Select4"></button>
-      
-      <!--<div id="subtitle" >Apple</div>-->
+
+    <!--<div id="subtitle" >Apple</div>-->
+    <button onclick="select(4)" id="Select4"></button>
+
+    <!--<div id="subtitle" >Apple</div>-->
     <button onclick="select(5)" id="Select5"></button>
-      
-      <!--<div id="subtitle" >Apple</div>-->
+
+    <!--<div id="subtitle" >Apple</div>-->
     <button onclick="select(6)" id="Select6"></button>
-      
-      <!--<div id="subtitle" >Apple</div>-->
+
+    <!--<div id="subtitle" >Apple</div>-->
     <button onclick="submit()" id="Done">Done</button>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.js"></script>
@@ -53,46 +88,41 @@
     <script src="js/modelLoaders/MTLLoader.js"></script>
     <script src="js/script.js"></script>
     <script>
-      localStorage.setItem("TodayCO2",0);
-      function submit(){
-        var currentTotal=parseInt(localStorage.getItem("TotalCO2"));
-        var currentToday=parseInt(localStorage.getItem("TodayCO2"));
-        localStorage.setItem("TotalCO2",currentTotal+currentToday);
-        window.location.href="/results";
+      localStorage.setItem("TodayCO2", 0);
+      function submit() {
+        var currentTotal = parseInt(localStorage.getItem("TotalCO2"));
+        var currentToday = parseInt(localStorage.getItem("TodayCO2"));
+        localStorage.setItem("TotalCO2", currentTotal + currentToday);
+        window.location.href = "/results";
       }
-      function select(number){
-        var todayCO2=parseInt(localStorage.getItem("TodayCO2"));
-        var totalCO2=parseInt(localStorage.getItem("TotalCO2"));
-        if(number==1){
-          todayCO2+=2;
-        }else if(number==2){
-          todayCO2+=1;
-        }else if(number==3){
-          todayCO2+=1;
-        }else if(number==4){
-          todayCO2+=4;
-        }else if(number==5){
-          todayCO2+=1;
-        }else if(number==6){
-          todayCO2+=220;
+      function select(number) {
+        var todayCO2 = parseInt(localStorage.getItem("TodayCO2"));
+        var totalCO2 = parseInt(localStorage.getItem("TotalCO2"));
+        if (number == 1) {
+          todayCO2 += 2;
+        } else if (number == 2) {
+          todayCO2 += 1;
+        } else if (number == 3) {
+          todayCO2 += 1;
+        } else if (number == 4) {
+          todayCO2 += 4;
+        } else if (number == 5) {
+          todayCO2 += 1;
+        } else if (number == 6) {
+          todayCO2 += 220;
         }
-        localStorage.setItem("TodayCO2",todayCO2);
+        localStorage.setItem("TodayCO2", todayCO2);
         //alert("hello");
-        document.getElementById("Check"+number).classList.remove("invis");
-        document.getElementById("SelectCover"+number).style.backgroundColor="rgba(0,0,0,0.5)";
+        document.getElementById("Check" + number).classList.remove("invis");
+        document.getElementById("SelectCover" + number).style.backgroundColor =
+          "rgba(0,0,0,0.5)";
         //alert(document.getElementById("Select"+number).style.background);
       }
     </script>
     <script>
-      function headerButton(){
-        var loggedIn=localStorage.getItem("LoggedIn");
-        if(loggedIn=="true"){
-          window.location.href="/dashboard";
-        }else{
-          window.location.href="/";
-        }
+      function headerButton() {
+        window.location.href = "/";
       }
     </script>
   </body>
 </html>
-

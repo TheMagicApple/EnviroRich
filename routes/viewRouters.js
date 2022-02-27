@@ -19,7 +19,7 @@ router.get("/selectThings", (req, res) => {
   res.sendFile(path.join(viewsPath, "/selectThings.html"));
 });
 
-router.get("/dashboard", (req, res) => {
+router.get("/dashboard", ensureLoggedIn("/"), (req, res) => {
   res.sendFile(path.join(viewsPath, "/dashboard.html"));
 });
 

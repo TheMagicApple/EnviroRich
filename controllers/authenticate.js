@@ -56,7 +56,7 @@ function userExists(req, res, next) {
     `Select * from user where username="${req.body.username || ""}"`,
     (error, results, fields) => {
       if (error) console.log(error);
-      else if (results.length > 0) res.redirect("/userAlreadyExists");
+      else if (results.length > 0) res.redirect("/signup");
       else next();
     }
   );
